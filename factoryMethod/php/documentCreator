@@ -1,0 +1,18 @@
+<?php
+require_once 'document.php';
+
+// Clase creadora abstracta que declara el Factory Method
+abstract class documentCreator
+{
+    // El Factory Method
+    abstract public function createDocument(): document;
+
+    // La operación principal de la clase creadora
+    public function doOperation(){
+        // Llama al Factory Method para crear un objeto Producto
+        $document = $this->createDocument();
+        $document->open();
+        $document->save();
+        return $document;
+    }
+}
