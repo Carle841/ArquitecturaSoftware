@@ -1,4 +1,11 @@
 <?php
+
+require_once 'Leaf.php';
+require_once 'Composite.php';
+
+use File;
+use Directory;
+
 $file1 = new File("documento1.txt", 100);
 $file2 = new File("documento2.txt", 200);
 
